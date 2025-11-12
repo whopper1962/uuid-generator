@@ -1,0 +1,21 @@
+{
+  "name": "hellouuid.com",
+  "short_name": "hellouuid.com",
+  "description": "Generate UUIDs instantly in all versions (v1, v3, v4, v5, v6, v7). Create time-based, random, or name-based UUIDs for databases, applications, and distributed systems.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff",
+  "theme_color": "#fff",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

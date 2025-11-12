@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap");
+@import "tailwindcss";
+@plugin "flowbite-react/plugin/tailwindcss";
+@source "../../.flowbite-react/class-list.json";
+
+@theme {
+  --font-sixtyfour: "Sixtyfour", sans-serif;
+  --font-google-sans-code: "Google Sans Code", monospace;
+}
+
+/* Embla Carousel */
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+
+/* Shake animation */
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-2px);
+  }
+  75% {
+    transform: translateX(2px);
+  }
+}
+
+.animate-shake {
+  animation: shake 0.2s ease-in-out;
+}
