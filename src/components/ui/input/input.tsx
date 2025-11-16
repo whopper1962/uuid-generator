@@ -2,7 +2,7 @@ import { tv, type VariantProps } from "tailwind-variants";
 import { forwardRef, useImperativeHandle, useRef, useState } from "react";
 
 const input = tv({
-  base: "text-sm rounded-lg block w-full p-2.5",
+  base: "text-sm rounded-lg block w-full p-2.5 disabled:bg-gray-100 disabled:border-gray-300 disabled:text-gray-400 disabled:cursor-not-allowed disabled:opacity-60 disabled:placeholder:text-gray-400 read-only:bg-gray-100 read-only:border-gray-300 read-only:placeholder:text-gray-400",
   variants: {
     state: {
       default:
