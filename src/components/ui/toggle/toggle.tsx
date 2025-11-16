@@ -23,7 +23,7 @@ const toggle = tv({
 });
 
 const label = tv({
-  base: "ms-3 text-xs md:text-sm font-medium",
+  base: "ms-3 text-xs md:text-sm",
 });
 
 export type ToggleProps = Omit<
