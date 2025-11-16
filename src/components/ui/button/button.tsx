@@ -2,7 +2,7 @@ import { tv, type VariantProps } from "tailwind-variants";
 import { forwardRef } from "react";
 
 const button = tv({
-  base: "inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-all disabled:pointer-events-none disabled:opacity-50 outline-none cursor-pointer h-fit",
+  base: "inline-flex px-4 py-2 items-center justify-center whitespace-nowrap rounded-md font-medium transition-all disabled:pointer-events-none disabled:opacity-50 outline-none cursor-pointer h-fit",
   variants: {
     appearance: {
       default:
@@ -26,13 +26,9 @@ const button = tv({
 });
 
 export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
-  VariantProps<typeof button> & {
-    asChild?: boolean;
-    isLoading?: boolean;
-    icon?: React.ReactNode;
-  };
+  VariantProps<typeof button>;
 
-export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ children, appearance = "default", className, ...props }, ref) => {
     return (
       <button
@@ -45,3 +41,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     );
   },
 );
+
+Button.displayName = "Button";
+
+export { Button };

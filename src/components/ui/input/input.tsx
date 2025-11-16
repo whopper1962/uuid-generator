@@ -40,7 +40,7 @@ export type InputRef = HTMLInputElement & {
   shake: () => void;
 };
 
-export const Input = forwardRef<InputRef, InputProps>(
+const Input = forwardRef<InputRef, InputProps>(
   ({ className, label: labelText, error, subContent, ...props }, ref) => {
     const inputRef = useRef<HTMLInputElement>(null);
     const [shaking, setShaking] = useState<boolean>(false);
@@ -89,3 +89,7 @@ export const Input = forwardRef<InputRef, InputProps>(
     );
   },
 );
+
+Input.displayName = "Input";
+
+export { Input };

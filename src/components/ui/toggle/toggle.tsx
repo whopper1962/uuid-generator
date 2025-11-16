@@ -35,7 +35,7 @@ export type ToggleProps = Omit<
     label?: string;
   };
 
-export const Toggle = forwardRef<HTMLInputElement, ToggleProps>(
+const Toggle = forwardRef<HTMLInputElement, ToggleProps>(
   (
     { checked, onChange, label: labelText, color, size, className, ...props },
     ref,
@@ -56,3 +56,7 @@ export const Toggle = forwardRef<HTMLInputElement, ToggleProps>(
     );
   },
 );
+
+Toggle.displayName = "Toggle";
+
+export { Toggle };
